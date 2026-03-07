@@ -137,7 +137,7 @@ public class MusicGuiScreen extends Screen {
         updateButtonStates();
     }
 
-    private void openFileChooser() {
+    public void openFileChooser() {
         Thread thread = new Thread(() -> {
             try {
                 String filePath = TinyFileDialogs.tinyfd_openFileDialog(
