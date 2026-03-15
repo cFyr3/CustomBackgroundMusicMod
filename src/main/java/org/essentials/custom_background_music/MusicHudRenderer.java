@@ -50,10 +50,12 @@ public class MusicHudRenderer {
             }
 
             // Draw background box
-            if (ModConfigs.SHOW_HUD_ICONS.get()) {
-                graphics.fill(x - 4, y - 4, x + width + 4 + (12 * 3), y + 12, 0x99000000);
-            } else {
-                graphics.fill(x - 4, y - 4, x + width + 4, y + 12, 0x99000000);
+            if (ModConfigs.SHOW_BACKGROUND.get()) {
+                if (ModConfigs.SHOW_HUD_ICONS.get()) {
+                    graphics.fill(x - 4, y - 4, x + width + 4 + (12 * 3), y + 12, 0x99000000);
+                } else {
+                    graphics.fill(x - 4, y - 4, x + width + 4, y + 12, 0x99000000);
+                }
             }
 
             // Draw Text

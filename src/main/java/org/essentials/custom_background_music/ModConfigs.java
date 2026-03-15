@@ -11,6 +11,7 @@ public class ModConfigs {
     public static final ModConfigSpec.IntValue HUD_X;
     public static final ModConfigSpec.IntValue HUD_Y;
     public static final ModConfigSpec.ConfigValue<String> HUD_COLOR;
+    public static  final ModConfigSpec.BooleanValue SHOW_BACKGROUND;
 
     static {
         BUILDER.push("Music HUD Settings");
@@ -21,6 +22,7 @@ public class ModConfigs {
         HUD_Y = BUILDER.defineInRange("hud_y", 10, 0, 4000);
         HUD_COLOR = BUILDER.define("hud_text_color", "FFFFFF");
         RESTRICT_VOLUME = BUILDER.define("push_volume_past_100", false);
+        SHOW_BACKGROUND = BUILDER.define("show_background", false);
         BUILDER.pop();
     }
 
